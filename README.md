@@ -1,4 +1,4 @@
-# Postgresq-HA-Cluster on Centos 8 / RHEL 8
+# Postgresql-HA-Cluster on Centos 8 / RHEL 8
 Highly Available PostgreSQL cluster using  Etcd, Patroni and HAProxy on Redhat 8 
 
 ## Prerequisites
