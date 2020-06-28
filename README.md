@@ -3,11 +3,16 @@ Highly Available PostgreSQL cluster using  Etcd, Patroni and HAProxy on Redhat 8
 
 ## Prerequisites
 you will need 4 (physical or virtual) machines with RHEL 8 server with minimal installed.
->  HOSTNAME	IP ADDRESS	PURPOSE
-> node01	192.168.100.41	Postgresql, Etcd, Patroni
-> node02	192.168.100.42	Postgresql, Etcd, Patroni
-> node03	192.168.100.43	Postgresql, Etcd, Patroni
-> node04	192.168.100.45	HAProxy
+> HOSTNAME  |   IP ADDRESS    | 	PURPOSE
+>
+> node01	  | 192.168.100.41  |	Postgresql, Etcd, Patroni
+>
+> node02	  | 192.168.100.42	| Postgresql, Etcd, Patroni
+>
+> node03	  | 192.168.100.43	| Postgresql, Etcd, Patroni
+>
+> node04    | 192.168.100.45	| HAProxy
+
 
 ## 1) Environment Preparation
 
