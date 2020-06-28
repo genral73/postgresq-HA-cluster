@@ -93,7 +93,7 @@ vim /etc/systemd/system/etcd.service
   WorkingDirectory=/var/lib/etcd/
   User=etcd
   # set GOMAXPROCS to number of processors
-  ExecStart=/bin/bash -c "GOMAXPROCS=$(nproc) /usr/bin/etcd  --config-file /etc/etcd/etcd.conf"
+  ExecStart=/bin/bash -c "GOMAXPROCS=$(nproc) /usr/local/bin/etcd  --config-file /etc/etcd/etcd.conf"
   Restart=always
   RestartSec=10s
   LimitNOFILE=65536
