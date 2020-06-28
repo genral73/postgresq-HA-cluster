@@ -226,8 +226,13 @@ vim /etc/haproxy/haproxy.cfg
       mode http
       bind *:7000
       stats enable
-      stats uri /
-
+      stats uri / 
+  listen Nodes
+      bind *:8080
+      mode tcp
+      server node01 192.168.100.41 check port 22
+      server node02 192.168.100.42 check port 22
+      server node03 192.168.100.43 check port 22
   listen postgres
       bind *:5000
       option httpchk
