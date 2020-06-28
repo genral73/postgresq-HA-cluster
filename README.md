@@ -36,7 +36,7 @@ We are installing PostgreSQL version 12 for this guide. If you wish, you can ins
 
 #### a) Install the repository RPM:
 ```bash
-dnf -y install https://github.com/genral73/postgresql-HA-cluster/blob/RHEL8/RPMS/pgdg-redhat-repo-latest.noarch.rpm
+dnf -y install https://github.com/genral73/postgresql-HA-cluster/blob/rhel8/RPMS/pgdg-redhat-repo-latest.noarch.rpm
 ```
 #### b) Disable the built-in PostgreSQL module:
 ```bash
@@ -52,7 +52,7 @@ dnf -y install postgresql12-server postgresql12 postgresql12-devel
 Etcd is a fault-tolerant, distributed key-value store that is used to store the state of the Postgres cluster. Using Patroni, all of the Postgres nodes make use of etcd to keep the Postgres cluster up and running.
 #### a) Get and extract the archive file, after that move etcd and etcdctl binary files to /usr/local/bin directory :
 ```bash
-wget https://github.com/genral73/postgresql-HA-cluster/blob/RHEL8/RPMS/etcd-v3.3.22-linux-amd64.tar.gz
+wget https://github.com/genral73/postgresql-HA-cluster/blob/rhel8/RPMS/etcd-v3.3.22-linux-amd64.tar.gz
 tar xvf etcd-v3.3.22-linux-amd64.tar.gz
 mv etcd-v3.3.22-linux-amd64/etcd* /usr/local/bin/
 etcdctl sudo groupadd --system etcd
@@ -125,8 +125,8 @@ etcdctl rm /message
 Patroni is an open-source python package that manages Postgres configuration. It can be configured to handle tasks like replication, backups, and restorations.
 #### a) Type below command to install patroni on (node01, node02, node03) only:
 ```bash
-dnf -y install https://github.com/genral73/postgresql-HA-cluster/blob/RHEL8/RPMS/python3-psycopg2-2.7.7-2.el7.x86_64.rpm
-dnf -y install https://github.com/genral73/postgresql-HA-cluster/blob/RHEL8/RPMS/patroni-1.6.5-1.rhel7.x86_64.rpm
+dnf -y install https://github.com/genral73/postgresql-HA-cluster/blob/rhel8/RPMS/python3-psycopg2-2.7.7-2.el7.x86_64.rpm
+dnf -y install https://github.com/genral73/postgresql-HA-cluster/blob/rhel8/RPMS/patroni-1.6.5-1.rhel7.x86_64.rpm
 ```
 #### b) Type below command on (node01, node02, node03) to edit postgresql.yml:
 ```bash
@@ -253,42 +253,4 @@ systemctl status haproxy
 ```bash
 PGPASSWORD=postgrespassword psql --host=192.168.100.44  --port=5000 --username=postgres
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
