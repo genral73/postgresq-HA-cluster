@@ -226,7 +226,9 @@ vim /etc/haproxy/haproxy.cfg
       mode http
       bind *:7000
       stats enable
-      stats uri / 
+      stats uri /
+      stats refresh 60s
+
   listen Nodes
       bind *:8080
       mode tcp
